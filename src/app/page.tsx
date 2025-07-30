@@ -7,6 +7,7 @@ import Image from 'next/image';
 import ClimaxLogo from '@/components/ClimaxLogo';
 import LogoSlider from '@/components/LogoSlider';
 import Counter from '@/components/Counter';
+import Portfolio from '@/components/Portfolio';
 
 export default function Home() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -33,6 +34,9 @@ export default function Home() {
               </a>
               <a href="#testimonials" className="text-climax-gray-700 hover:text-climax-primary transition-colors font-medium">
                 Depoimentos
+              </a>
+              <a href="#portfolio" className="text-climax-gray-700 hover:text-climax-primary transition-colors font-medium">
+                Trabalhos
               </a>
               <a href="#contact" className="text-climax-gray-700 hover:text-climax-primary transition-colors font-medium">
                 Contato
@@ -90,6 +94,13 @@ export default function Home() {
                   onClick={() => setIsMenuOpen(false)}
                 >
                   Depoimentos
+                </a>
+                <a
+                  href="#portfolio"
+                  className="text-climax-gray-700 hover:text-climax-primary transition-colors font-medium"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  Trabalhos
                 </a>
                 <a
                   href="#contact"
@@ -705,6 +716,9 @@ export default function Home() {
           </motion.div>
         </div>
       </section>
+
+      {/* Portfolio Section */}
+      <Portfolio />
 
       {/* Contact Section */}
       <section id="contact" className="section-padding bg-climax-gray-900 text-white">
