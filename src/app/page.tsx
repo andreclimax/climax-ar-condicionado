@@ -7,7 +7,7 @@ import Image from 'next/image';
 import ClimaxLogo from '@/components/ClimaxLogo';
 import LogoSlider from '@/components/LogoSlider';
 import Counter from '@/components/Counter';
-import Portfolio from '@/components/Portfolio';
+import PortfolioSection from '@/components/PortfolioSection';
 
 export default function Home() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -32,11 +32,11 @@ export default function Home() {
               <a href="#about" className="text-climax-gray-700 hover:text-climax-primary transition-colors font-medium">
                 Sobre
               </a>
+              <a href="#trabalhos" className="text-climax-gray-700 hover:text-climax-primary transition-colors font-medium">
+                Trabalhos
+              </a>
               <a href="#testimonials" className="text-climax-gray-700 hover:text-climax-primary transition-colors font-medium">
                 Depoimentos
-              </a>
-              <a href="#portfolio" className="text-climax-gray-700 hover:text-climax-primary transition-colors font-medium">
-                Trabalhos
               </a>
               <a href="#contact" className="text-climax-gray-700 hover:text-climax-primary transition-colors font-medium">
                 Contato
@@ -89,18 +89,18 @@ export default function Home() {
                   Sobre
                 </a>
                 <a
+                  href="#trabalhos"
+                  className="text-climax-gray-700 hover:text-climax-primary transition-colors font-medium"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  Trabalhos
+                </a>
+                <a
                   href="#testimonials"
                   className="text-climax-gray-700 hover:text-climax-primary transition-colors font-medium"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   Depoimentos
-                </a>
-                <a
-                  href="#portfolio"
-                  className="text-climax-gray-700 hover:text-climax-primary transition-colors font-medium"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  Trabalhos
                 </a>
                 <a
                   href="#contact"
@@ -575,6 +575,9 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Portfolio Section */}
+      <PortfolioSection />
+
       {/* Testimonials Section */}
       <section id="testimonials" className="section-padding bg-climax-gray-50">
         <div className="container mx-auto px-4">
@@ -676,16 +679,20 @@ export default function Home() {
                 </div>
               </div>
               <p className="text-climax-gray-600 mb-6 italic">
-                &ldquo;Manutenção preventiva feita com qualidade. A equipe é muito profissional e o preço é justo. Já sou cliente há 3 anos e nunca tive problemas!&rdquo;
+                &ldquo;O André é um grande amigo meu, e o pai dele também é uma pessoa excepcional, dois caras incríveis e super profissionais. Sempre que precisei, resolveram tudo com rapidez, atenção e qualidade. É aquele tipo de serviço que você confia de olhos fechados, porque sabe quem tá por trás. Recomendo demais a Clímax!&rdquo;
               </p>
               <div className="text-center">
                 <div className="mb-4 flex justify-center">
-                  <div className="w-20 h-20 bg-climax-accent rounded-full flex items-center justify-center text-white font-bold text-2xl">
-                    A
-                  </div>
+                  <Image
+                    src="/images/logo-legacy-barbershop.jpg"
+                    alt="Legacy Barbershop Logo"
+                    width={120}
+                    height={80}
+                    className="rounded-lg object-contain"
+                  />
                 </div>
-                <h4 className="font-semibold text-climax-gray-900">Ana Costa</h4>
-                <p className="text-climax-gray-500 text-sm">Empresarial</p>
+                <h4 className="font-semibold text-climax-gray-900">Gabriel</h4>
+                <p className="text-climax-gray-500 text-sm">Legacy Barbershop</p>
               </div>
             </motion.div>
           </div>
@@ -716,9 +723,6 @@ export default function Home() {
           </motion.div>
         </div>
       </section>
-
-      {/* Portfolio Section */}
-      <Portfolio />
 
       {/* Contact Section */}
       <section id="contact" className="section-padding bg-climax-gray-900 text-white">
