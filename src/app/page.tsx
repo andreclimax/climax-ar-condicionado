@@ -126,9 +126,9 @@ export default function Home() {
       </header>
 
       {/* Hero Section */}
-      <section id="home" className="relative min-h-screen flex items-center justify-center bg-gradient-hero pt-20">
+      <section id="home" className="relative min-h-screen flex items-center justify-center bg-gradient-hero pt-16 sm:pt-20">
         <div className="container mx-auto px-4">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="grid lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 items-center">
             {/* Content */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -136,53 +136,53 @@ export default function Home() {
               transition={{ duration: 0.8 }}
               className="text-center lg:text-left"
             >
-              <h1 className="text-4xl lg:text-6xl font-bold text-climax-gray-900 mb-6">
+              <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-bold text-climax-gray-900 mb-4 sm:mb-6">
                 Especialistas em{' '}
                 <span className="text-gradient">Ar Condicionado</span>
               </h1>
               
-              <p className="text-xl text-climax-gray-600 mb-8 leading-relaxed">
+              <p className="text-base sm:text-lg lg:text-xl text-climax-gray-600 mb-6 sm:mb-8 leading-relaxed">
                 Instalação, manutenção e reparo de sistemas de ar condicionado com qualidade profissional e garantia de satisfação.
               </p>
 
               {/* Features */}
-              <div className="flex flex-wrap gap-4 mb-8 justify-center lg:justify-start">
-                <div className="flex items-center space-x-2 text-climax-gray-700">
-                  <CheckCircle className="text-climax-accent" size={20} />
+              <div className="flex flex-wrap gap-2 sm:gap-4 mb-6 sm:mb-8 justify-center lg:justify-start">
+                <div className="flex items-center space-x-1 sm:space-x-2 text-climax-gray-700 text-sm sm:text-base">
+                  <CheckCircle className="text-climax-accent w-4 h-4 sm:w-5 sm:h-5 flex-shrink-0" />
                   <span>Instalação Profissional</span>
                 </div>
-                <div className="flex items-center space-x-2 text-climax-gray-700">
-                  <CheckCircle className="text-climax-accent" size={20} />
+                <div className="flex items-center space-x-1 sm:space-x-2 text-climax-gray-700 text-sm sm:text-base">
+                  <CheckCircle className="text-climax-accent w-4 h-4 sm:w-5 sm:h-5 flex-shrink-0" />
                   <span>Manutenção Preventiva</span>
                 </div>
-                <div className="flex items-center space-x-2 text-climax-gray-700">
-                  <CheckCircle className="text-climax-accent" size={20} />
+                <div className="flex items-center space-x-1 sm:space-x-2 text-climax-gray-700 text-sm sm:text-base">
+                  <CheckCircle className="text-climax-accent w-4 h-4 sm:w-5 sm:h-5 flex-shrink-0" />
                   <span>Reparo Rápido</span>
                 </div>
               </div>
 
               {/* Rating */}
-              <div className="flex items-center justify-center lg:justify-start space-x-2 mb-8">
+              <div className="flex items-center justify-center lg:justify-start space-x-2 mb-6 sm:mb-8">
                 <div className="flex space-x-1">
                   {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="text-yellow-400 fill-current" size={20} />
+                    <Star key={i} className="text-yellow-400 fill-current w-4 h-4 sm:w-5 sm:h-5" />
                   ))}
                 </div>
-                <span className="text-climax-gray-600 font-medium">4.9 (150+ avaliações)</span>
+                <span className="text-climax-gray-600 font-medium text-sm sm:text-base">4.9 (150+ avaliações)</span>
               </div>
 
               {/* CTA Buttons */}
-              <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start">
                 <a
                   href="tel:+5543998312268"
-                  className="btn btn-primary text-lg px-8 py-4"
+                  className="btn btn-primary text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4"
                 >
-                  <Phone size={20} className="mr-2" />
+                  <Phone size={18} className="mr-2" />
                   Solicitar Orçamento
                 </a>
                 <a
                   href="#services"
-                  className="btn btn-outline text-lg px-8 py-4"
+                  className="btn btn-outline text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4"
                 >
                   Nossos Serviços
                 </a>
@@ -196,10 +196,10 @@ export default function Home() {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="relative"
             >
-              <div className="relative bg-white rounded-3xl shadow-2xl p-8 lg:p-12">
-                <div className="aspect-square bg-gradient-to-br from-climax-primary/10 via-climax-secondary/10 to-climax-accent/10 rounded-2xl flex items-center justify-center">
+              <div className="relative bg-white rounded-2xl sm:rounded-3xl shadow-2xl p-4 sm:p-6 lg:p-8 xl:p-12">
+                <div className="aspect-square bg-gradient-to-br from-climax-primary/10 via-climax-secondary/10 to-climax-accent/10 rounded-xl sm:rounded-2xl flex items-center justify-center">
                   <div className="text-center">
-                    <div className="relative w-32 h-32 mx-auto mb-4">
+                    <div className="relative w-24 h-24 sm:w-28 sm:h-28 lg:w-32 lg:h-32 mx-auto mb-3 sm:mb-4">
                       <Image
                         src="/climax-logo.png"
                         alt="Climax Ar Condicionado"
@@ -207,21 +207,21 @@ export default function Home() {
                         className="object-contain"
                       />
                     </div>
-                    <h3 className="text-xl font-semibold text-climax-gray-900 mb-2">
+                    <h3 className="text-lg sm:text-xl font-semibold text-climax-gray-900 mb-1 sm:mb-2">
                       Ar Condicionado
                     </h3>
-                    <p className="text-climax-gray-600">
+                    <p className="text-sm sm:text-base text-climax-gray-600">
                       Qualidade e conforto garantidos
                     </p>
                   </div>
                 </div>
                 
                 {/* Floating elements */}
-                <div className="absolute -top-4 -right-4 bg-climax-accent text-white rounded-full p-3 shadow-lg">
-                  <CheckCircle size={24} />
+                <div className="absolute -top-2 -right-2 sm:-top-4 sm:-right-4 bg-climax-accent text-white rounded-full p-2 sm:p-3 shadow-lg">
+                  <CheckCircle size={18} className="sm:w-6 sm:h-6" />
                 </div>
-                <div className="absolute -bottom-4 -left-4 bg-climax-brown text-white rounded-full p-3 shadow-lg">
-                  <Star size={24} />
+                <div className="absolute -bottom-2 -left-2 sm:-bottom-4 sm:-left-4 bg-climax-brown text-white rounded-full p-2 sm:p-3 shadow-lg">
+                  <Star size={18} className="sm:w-6 sm:h-6" />
                 </div>
               </div>
             </motion.div>
@@ -230,10 +230,10 @@ export default function Home() {
 
         {/* Background decoration */}
         <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
-          <div className="absolute top-20 left-10 w-32 h-32 bg-climax-primary/10 rounded-full blur-3xl"></div>
-          <div className="absolute bottom-20 right-10 w-40 h-40 bg-climax-secondary/10 rounded-full blur-3xl"></div>
-          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-60 h-60 bg-climax-accent/10 rounded-full blur-3xl"></div>
-          <div className="absolute top-1/3 right-1/4 w-24 h-24 bg-climax-brown/10 rounded-full blur-3xl"></div>
+          <div className="absolute top-16 sm:top-20 left-4 sm:left-10 w-20 h-20 sm:w-32 sm:h-32 bg-climax-primary/10 rounded-full blur-2xl sm:blur-3xl"></div>
+          <div className="absolute bottom-16 sm:bottom-20 right-4 sm:right-10 w-24 h-24 sm:w-40 sm:h-40 bg-climax-secondary/10 rounded-full blur-2xl sm:blur-3xl"></div>
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-40 h-40 sm:w-60 sm:h-60 bg-climax-accent/10 rounded-full blur-2xl sm:blur-3xl"></div>
+          <div className="absolute top-1/3 right-1/4 w-16 h-16 sm:w-24 sm:h-24 bg-climax-brown/10 rounded-full blur-2xl sm:blur-3xl"></div>
         </div>
       </section>
 
@@ -250,41 +250,41 @@ export default function Home() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-3xl lg:text-5xl font-bold text-climax-gray-900 mb-6">
+            <h2 className="text-2xl sm:text-3xl lg:text-5xl font-bold text-climax-gray-900 mb-4 sm:mb-6">
               Nossos Serviços Especializados
             </h2>
-            <p className="text-xl text-climax-gray-600 max-w-3xl mx-auto">
+            <p className="text-base sm:text-xl text-climax-gray-600 max-w-3xl mx-auto px-4">
               Oferecemos soluções completas em ar condicionado com documentação técnica e engenheiro capacitado
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
             {/* Service 1 */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.1 }}
               viewport={{ once: true }}
-              className="card card-hover p-8 text-center"
+              className="card card-hover p-4 sm:p-6 lg:p-8 text-center"
             >
-              <div className="icon-container icon-primary w-16 h-16 mx-auto mb-6">
-                <Wrench size={32} />
+              <div className="icon-container icon-primary w-12 h-12 sm:w-16 sm:h-16 mx-auto mb-4 sm:mb-6">
+                <Wrench size={24} className="sm:w-8 sm:h-8" />
               </div>
-              <h3 className="text-2xl font-bold text-climax-gray-900 mb-4">Instalação Profissional</h3>
-              <p className="text-climax-gray-600 mb-6">
+              <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-climax-gray-900 mb-3 sm:mb-4">Instalação Profissional</h3>
+              <p className="text-sm sm:text-base text-climax-gray-600 mb-4 sm:mb-6">
                 Instalação profissional com projetos de climatização e todos os documentos necessários.
               </p>
               <ul className="text-left space-y-2 text-climax-gray-600">
-                <li className="flex items-center space-x-2">
-                  <CheckCircle className="text-climax-accent" size={16} />
+                <li className="flex items-center space-x-1 sm:space-x-2">
+                  <CheckCircle className="text-climax-accent w-4 h-4 sm:w-4 sm:h-4 flex-shrink-0" />
                   <span>Projetos de climatização</span>
                 </li>
-                <li className="flex items-center space-x-2">
-                  <CheckCircle className="text-climax-accent" size={16} />
+                <li className="flex items-center space-x-1 sm:space-x-2">
+                  <CheckCircle className="text-climax-accent w-4 h-4 sm:w-4 sm:h-4 flex-shrink-0" />
                   <span>Emissão de ART</span>
                 </li>
-                <li className="flex items-center space-x-2">
-                  <CheckCircle className="text-climax-accent" size={16} />
+                <li className="flex items-center space-x-1 sm:space-x-2">
+                  <CheckCircle className="text-climax-accent w-4 h-4 sm:w-4 sm:h-4 flex-shrink-0" />
                   <span>Instalação elétrica</span>
                 </li>
               </ul>
@@ -296,26 +296,26 @@ export default function Home() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
               viewport={{ once: true }}
-              className="card card-hover p-8 text-center"
+              className="card card-hover p-4 sm:p-6 lg:p-8 text-center"
             >
-              <div className="icon-container icon-secondary w-16 h-16 mx-auto mb-6">
-                <Settings size={32} />
+              <div className="icon-container icon-secondary w-12 h-12 sm:w-16 sm:h-16 mx-auto mb-4 sm:mb-6">
+                <Settings size={24} className="sm:w-8 sm:h-8" />
               </div>
-              <h3 className="text-2xl font-bold text-climax-gray-900 mb-4">Manutenção Preventiva</h3>
-              <p className="text-climax-gray-600 mb-6">
+              <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-climax-gray-900 mb-3 sm:mb-4">Manutenção Preventiva</h3>
+              <p className="text-sm sm:text-base text-climax-gray-600 mb-4 sm:mb-6">
                 Manutenção preventiva com emissão de PMOC e todos os documentos necessários.
               </p>
               <ul className="text-left space-y-2 text-climax-gray-600">
-                <li className="flex items-center space-x-2">
-                  <CheckCircle className="text-climax-accent" size={16} />
+                <li className="flex items-center space-x-1 sm:space-x-2">
+                  <CheckCircle className="text-climax-accent w-4 h-4 sm:w-4 sm:h-4 flex-shrink-0" />
                   <span>Emissão de PMOC</span>
                 </li>
-                <li className="flex items-center space-x-2">
-                  <CheckCircle className="text-climax-accent" size={16} />
-                  <span>Limpeza de filtros</span>
+                <li className="flex items-center space-x-1 sm:space-x-2">
+                  <CheckCircle className="text-climax-accent w-4 h-4 sm:w-4 sm:h-4 flex-shrink-0" />
+                  <span>Manutenção Corretiva</span>
                 </li>
-                <li className="flex items-center space-x-2">
-                  <CheckCircle className="text-climax-accent" size={16} />
+                <li className="flex items-center space-x-1 sm:space-x-2">
+                  <CheckCircle className="text-climax-accent w-4 h-4 sm:w-4 sm:h-4 flex-shrink-0" />
                   <span>Verificação de gás</span>
                 </li>
               </ul>
@@ -327,26 +327,26 @@ export default function Home() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.3 }}
               viewport={{ once: true }}
-              className="card card-hover p-8 text-center"
+              className="card card-hover p-4 sm:p-6 lg:p-8 text-center"
             >
-              <div className="icon-container icon-accent w-16 h-16 mx-auto mb-6">
-                <Shield size={32} />
+              <div className="icon-container icon-accent w-12 h-12 sm:w-16 sm:h-16 mx-auto mb-4 sm:mb-6">
+                <Shield size={24} className="sm:w-8 sm:h-8" />
               </div>
-              <h3 className="text-2xl font-bold text-climax-gray-900 mb-4">Assistência Técnica</h3>
-              <p className="text-climax-gray-600 mb-6">
+              <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-climax-gray-900 mb-3 sm:mb-4">Assistência Técnica</h3>
+              <p className="text-sm sm:text-base text-climax-gray-600 mb-4 sm:mb-6">
                 Assistência técnica com engenheiro capacitado para todas as manutenções necessárias.
               </p>
               <ul className="text-left space-y-2 text-climax-gray-600">
-                <li className="flex items-center space-x-2">
-                  <CheckCircle className="text-climax-accent" size={16} />
+                <li className="flex items-center space-x-1 sm:space-x-2">
+                  <CheckCircle className="text-climax-accent w-4 h-4 sm:w-4 sm:h-4 flex-shrink-0" />
                   <span>Engenheiro capacitado</span>
                 </li>
-                <li className="flex items-center space-x-2">
-                  <CheckCircle className="text-climax-accent" size={16} />
+                <li className="flex items-center space-x-1 sm:space-x-2">
+                  <CheckCircle className="text-climax-accent w-4 h-4 sm:w-4 sm:h-4 flex-shrink-0" />
                   <span>Manutenções necessárias</span>
                 </li>
                 <li className="flex items-center space-x-2">
-                  <CheckCircle className="text-climax-accent" size={16} />
+                  <CheckCircle className="text-climax-accent w-4 h-4 sm:w-4 sm:h-4 flex-shrink-0" />
                   <span>Diagnóstico preciso</span>
                 </li>
               </ul>

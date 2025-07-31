@@ -361,11 +361,18 @@ h3 {
 }
 
 .animate-scroll {
-  animation: scroll 30s linear infinite;
+  animation: scroll 6s linear infinite;
 }
 
 .animate-scroll:hover {
   animation-play-state: paused;
+}
+
+/* Mobile animation - even faster */
+@media (max-width: 768px) {
+  .animate-scroll {
+    animation: scroll 4s linear infinite;
+  }
 }
 
 /* Professional Glass Effect */
