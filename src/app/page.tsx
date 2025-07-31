@@ -9,8 +9,10 @@ import LogoSlider from '@/components/LogoSlider';
 import Counter from '@/components/Counter';
 import PortfolioSection from '@/components/PortfolioSection';
 
+
 export default function Home() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+
 
   return (
     <div className="min-h-screen">
@@ -353,85 +355,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* About Section */}
-      <section id="about" className="section-padding bg-white">
-        <div className="container mx-auto px-4">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
-              <h2 className="text-3xl lg:text-5xl font-bold text-climax-gray-900 mb-6">
-                Sobre a Climax
-              </h2>
-              <p className="text-xl text-climax-gray-600 mb-8 leading-relaxed">
-                Somos uma empresa especializada em sistemas de ar condicionado, com mais de 22 anos de experiência no mercado. 
-                Nossa missão é proporcionar conforto e qualidade de vida através de soluções eficientes e sustentáveis, 
-                com atendimento 24 horas e trabalhos aos fins de semana.
-              </p>
-            </motion.div>
 
-            <motion.div
-              initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              viewport={{ once: true }}
-              className="relative"
-            >
-              <div className="bg-white rounded-3xl shadow-2xl p-8 lg:p-12">
-                <div className="flex items-center justify-center mb-6">
-                  <ClimaxLogo size="xl" showText={false} className="mr-4" />
-                  <h3 className="text-2xl font-bold text-climax-gray-900">Por que escolher a Climax?</h3>
-                </div>
-                
-                <div className="space-y-6">
-                  <div className="flex items-start space-x-4">
-                    <div className="icon-container icon-primary w-12 h-12 flex-shrink-0">
-                      <Clock size={24} />
-                    </div>
-                    <div>
-                      <h4 className="font-semibold text-climax-gray-900 mb-2">Atendimento 24h</h4>
-                      <p className="text-climax-gray-600">Disponível 24 horas por dia, incluindo fins de semana</p>
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-start space-x-4">
-                    <div className="icon-container icon-secondary w-12 h-12 flex-shrink-0">
-                      <Shield size={24} />
-                    </div>
-                    <div>
-                      <h4 className="font-semibold text-climax-gray-900 mb-2">Documentação Completa</h4>
-                      <p className="text-climax-gray-600">Emissão de PMOC, ART e todos os documentos necessários</p>
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-start space-x-4">
-                    <div className="icon-container icon-accent w-12 h-12 flex-shrink-0">
-                      <Wrench size={24} />
-                    </div>
-                    <div>
-                      <h4 className="font-semibold text-climax-gray-900 mb-2">Engenheiro Capacitado</h4>
-                      <p className="text-climax-gray-600">Profissional qualificado para todas as manutenções necessárias</p>
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-start space-x-4">
-                    <div className="icon-container icon-brown w-12 h-12 flex-shrink-0">
-                      <Settings size={24} />
-                    </div>
-                    <div>
-                      <h4 className="font-semibold text-climax-gray-900 mb-2">Projetos de Climatização</h4>
-                      <p className="text-climax-gray-600">Instalação profissional com projetos técnicos completos</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </motion.div>
-          </div>
-        </div>
-      </section>
 
       {/* Stats & CTA Section */}
       <section className="section-padding bg-climax-gray-900 text-white">
@@ -578,6 +502,8 @@ export default function Home() {
       {/* Portfolio Section */}
       <PortfolioSection />
 
+
+
       {/* Testimonials Section */}
       <section id="testimonials" className="section-padding bg-climax-gray-50">
         <div className="container mx-auto px-4">
@@ -625,7 +551,7 @@ export default function Home() {
                     className="rounded-lg object-contain"
                   />
                 </div>
-                <h4 className="font-semibold text-climax-gray-900">Walter</h4>
+                <h4 className="font-semibold text-climax-gray-900">Walter Carreri</h4>
                 <p className="text-climax-gray-500 text-sm">DWLfoods</p>
               </div>
             </motion.div>
@@ -691,8 +617,74 @@ export default function Home() {
                     className="rounded-lg object-contain"
                   />
                 </div>
-                <h4 className="font-semibold text-climax-gray-900">Gabriel</h4>
+                <h4 className="font-semibold text-climax-gray-900">Gabriel Zequini</h4>
                 <p className="text-climax-gray-500 text-sm">Legacy Barbershop</p>
+              </div>
+            </motion.div>
+
+            {/* Testimonial 4 */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+              viewport={{ once: true }}
+              className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 lg:col-start-1"
+            >
+              <div className="flex items-center mb-6">
+                <div className="flex text-yellow-400">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} size={20} className="fill-current" />
+                  ))}
+                </div>
+              </div>
+              <p className="text-climax-gray-600 mb-6 italic">
+                &ldquo;Excelente trabalho realizado pela equipe da Climax! Instalaram o ar condicionado na nossa empresa com muita competência e profissionalismo. O projeto foi entregue dentro do prazo, com toda a documentação necessária e funcionando perfeitamente. Recomendo fortemente para qualquer empresa que precise de serviços de climatização.&rdquo;
+              </p>
+              <div className="text-center">
+                <div className="mb-4 flex justify-center">
+                  <Image
+                    src="/images/logo-marista.png"
+                    alt="Marista Logo"
+                    width={120}
+                    height={80}
+                    className="rounded-lg object-contain"
+                  />
+                </div>
+                <h4 className="font-semibold text-climax-gray-900">Rodrigo Leandro</h4>
+                <p className="text-climax-gray-500 text-sm">Colégio Marista</p>
+              </div>
+            </motion.div>
+
+            {/* Testimonial 5 */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.5 }}
+              viewport={{ once: true }}
+              className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 lg:col-start-2"
+            >
+              <div className="flex items-center mb-6">
+                <div className="flex text-yellow-400">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} size={20} className="fill-current" />
+                  ))}
+                </div>
+              </div>
+              <p className="text-climax-gray-600 mb-6 italic">
+                &ldquo;Fala, mano! Passando aqui pra deixar meu feedback sincero: Contratei o André pra instalar 5 ares-condicionados na sede da Vulpeinc e o serviço foi simplesmente impecável. Atendimento top, instalação rápida, tudo bem feito e com muito profissionalismo. É de confiança total e recomendo sem pensar duas vezes. Pode usar o nome da empresa tranquilo na avaliação, porque foi tudo feito com excelência. Valeu demais, irmão! 👊🏼🔥&rdquo;
+              </p>
+                              <div className="text-center">
+                  <div className="mb-4 flex justify-center">
+                    <Image
+                      src="/images/logo-vulpeinc.png"
+                      alt="Vulpeinc Logo"
+                      width={80}
+                      height={80}
+                      className="rounded-lg object-contain"
+                    />
+                  </div>
+                <h4 className="font-semibold text-climax-gray-900">Pablo Pereyra</h4>
+                <p className="text-climax-gray-500 text-sm">Vulpeinc</p>
               </div>
             </motion.div>
           </div>
@@ -721,6 +713,179 @@ export default function Home() {
               </a>
             </div>
           </motion.div>
+        </div>
+      </section>
+
+      {/* About Section */}
+      <section id="about" className="section-padding bg-white">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-3xl lg:text-5xl font-bold text-climax-gray-900 mb-6">
+              Sobre a Climax
+            </h2>
+            <p className="text-xl text-climax-gray-600 max-w-4xl mx-auto leading-relaxed">
+              Somos uma empresa especializada em sistemas de ar condicionado, com mais de 22 anos de experiência no mercado. 
+              Nossa missão é proporcionar conforto e qualidade de vida através de soluções eficientes e sustentáveis, 
+              com atendimento 24 horas e trabalhos aos fins de semana.
+            </p>
+          </motion.div>
+
+          <div className="max-w-4xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              viewport={{ once: true }}
+              className="relative"
+            >
+              <div className="bg-white rounded-3xl shadow-2xl p-8 lg:p-12">
+                <div className="flex items-center justify-center mb-6">
+                  <ClimaxLogo size="xl" showText={false} className="mr-4" />
+                  <h3 className="text-2xl font-bold text-climax-gray-900">Por que escolher a Climax?</h3>
+                </div>
+                
+                <div className="space-y-6">
+                  <div className="flex items-start space-x-4">
+                    <div className="icon-container icon-primary w-12 h-12 flex-shrink-0">
+                      <Clock size={24} />
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-climax-gray-900 mb-2">Atendimento 24h</h4>
+                      <p className="text-climax-gray-600">Disponível 24 horas por dia, incluindo fins de semana</p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-start space-x-4">
+                    <div className="icon-container icon-secondary w-12 h-12 flex-shrink-0">
+                      <Shield size={24} />
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-climax-gray-900 mb-2">Documentação Completa</h4>
+                      <p className="text-climax-gray-600">Emissão de PMOC, ART e todos os documentos necessários</p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-start space-x-4">
+                    <div className="icon-container icon-accent w-12 h-12 flex-shrink-0">
+                      <Wrench size={24} />
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-climax-gray-900 mb-2">Engenheiro Capacitado</h4>
+                      <p className="text-climax-gray-600">Profissional qualificado para todas as manutenções necessárias</p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-start space-x-4">
+                    <div className="icon-container icon-brown w-12 h-12 flex-shrink-0">
+                      <Settings size={24} />
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-climax-gray-900 mb-2">Projetos de Climatização</h4>
+                      <p className="text-climax-gray-600">Instalação profissional com projetos técnicos completos</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Team Section */}
+      <section className="section-padding bg-climax-gray-50">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-3xl lg:text-5xl font-bold text-climax-gray-900 mb-6">
+              Nossa Equipe
+            </h2>
+            <p className="text-xl text-climax-gray-600 max-w-3xl mx-auto">
+              Conheça os profissionais especializados que fazem a Climax ser referência em ar condicionado
+            </p>
+          </motion.div>
+
+          <div className="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
+            {/* Gomes */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.1 }}
+              viewport={{ once: true }}
+              className="bg-white rounded-3xl p-8 lg:p-12 shadow-xl hover:shadow-2xl transition-all duration-300"
+            >
+                              <div className="text-center">
+                  <div className="relative mb-8">
+                    <div 
+                      className="w-64 h-64 rounded-full overflow-hidden border-6 border-climax-primary shadow-2xl mx-auto hover:scale-105 transition-transform duration-300"
+                    >
+                      <Image
+                        src="/images/P1025835.png"
+                        alt="Gomes - Climax Ar Condicionado"
+                        width={512}
+                        height={512}
+                        className="w-full h-full object-cover"
+                        quality={95}
+                        priority
+                      />
+                    </div>
+                  </div>
+                <h3 className="text-2xl font-bold text-climax-gray-900 mb-3">Gomes</h3>
+                <p className="text-climax-primary font-semibold mb-4">Fundador e Especialista</p>
+                <p className="text-climax-gray-600 leading-relaxed">
+                  Com mais de 30 anos de experiência no mercado de refrigeração, 
+                  Gomes é o fundador da Climax e responsável por garantir a qualidade 
+                  e excelência em todos os nossos serviços. Sua dedicação e conhecimento 
+                  técnico são a base do nosso sucesso.
+                </p>
+              </div>
+            </motion.div>
+
+            {/* André */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              viewport={{ once: true }}
+              className="bg-white rounded-3xl p-8 lg:p-12 shadow-xl hover:shadow-2xl transition-all duration-300"
+            >
+                              <div className="text-center">
+                  <div className="relative mb-8">
+                    <div 
+                      className="w-64 h-64 rounded-full overflow-hidden border-6 border-climax-secondary shadow-2xl mx-auto hover:scale-105 transition-transform duration-300"
+                    >
+                      <Image
+                        src="/images/P1025839.png"
+                        alt="André - Climax Ar Condicionado"
+                        width={512}
+                        height={512}
+                        className="w-full h-full object-cover"
+                        quality={95}
+                        priority
+                      />
+                    </div>
+                  </div>
+                <h3 className="text-2xl font-bold text-climax-gray-900 mb-3">André</h3>
+                                  <p className="text-climax-secondary font-semibold mb-4">Sócio e Técnico</p>
+                <p className="text-climax-gray-600 leading-relaxed">
+                  André é nosso técnico capacitado, responsável por todos os projetos 
+                  técnicos, emissão de documentação e manutenções especializadas. 
+                  Sua formação técnica garante que todos os serviços sejam executados 
+                  com a máxima qualidade e segurança.
+                </p>
+              </div>
+            </motion.div>
+          </div>
         </div>
       </section>
 
@@ -926,6 +1091,8 @@ Mensagem: ${mensagem}`;
           </div>
         </div>
       </footer>
+
+
     </div>
   );
 }
