@@ -87,7 +87,7 @@ export default function RootLayout({
               "description": "Especialistas em ar condicionado em Londrina há mais de 22 anos",
               "url": "https://climaxarcondicionado.com.br",
               "telephone": "+5543998312268",
-              "email": "contato@climax.com.br",
+              "email": "andre.climax@gmail.com",
               "address": {
                 "@type": "PostalAddress",
                 "addressLocality": "Londrina",

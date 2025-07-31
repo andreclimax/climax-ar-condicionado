@@ -26,13 +26,13 @@ const portfolioItems = [
     image: '/images/trabalhos/trabalho-3-estoque-ar-condicionado.jpg',
     category: 'Venda'
   },
-  {
-    id: 4,
-    title: 'Venda de Splits',
-    description: 'Vendas das melhores marcas de equipamentos de refrigeração.',
-    image: '/images/trabalhos/trabalho-4-sistema-teto.jpg',
-    category: 'Venda'
-  },
+            {
+            id: 4,
+            title: 'Comercialização de equipamentos de ar condicionado',
+            description: 'Vendas das melhores marcas de equipamentos de refrigeração.',
+            image: '/images/trabalhos/trabalho-4-sistema-teto.jpg',
+            category: 'Venda'
+          },
   {
     id: 5,
     title: 'Instalação Comercial',

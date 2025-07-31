@@ -770,8 +770,7 @@ export default function Home() {
                   </div>
                   <div>
                     <h4 className="font-semibold text-white">E-mail</h4>
-                    <p className="text-climax-gray-300">contato@climax.com.br</p>
-                    <p className="text-climax-gray-300">orcamento@climax.com.br</p>
+                    <p className="text-climax-gray-300">andre.climax@gmail.com</p>
                   </div>
                 </div>
                 
@@ -898,7 +897,7 @@ Mensagem: ${mensagem}`;
       {/* Footer */}
       <footer className="bg-climax-gray-900 text-white py-12">
         <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 gap-8">
             <div>
               <div className="mb-4">
                 <ClimaxLogo size="md" />
@@ -906,38 +905,16 @@ Mensagem: ${mensagem}`;
               <p className="text-climax-gray-400 mb-4">
                 Especialistas em ar condicionado com qualidade e garantia de satisfação.
               </p>
-              <div className="flex space-x-4">
-                <div className="w-10 h-10 bg-climax-primary rounded-full flex items-center justify-center">
-                  <Phone size={20} />
-                </div>
-                <div className="w-10 h-10 bg-climax-secondary rounded-full flex items-center justify-center">
-                  <Mail size={20} />
-                </div>
-                <div className="w-10 h-10 bg-climax-accent rounded-full flex items-center justify-center">
-                  <MapPin size={20} />
-                </div>
-                <div className="w-10 h-10 bg-climax-brown rounded-full flex items-center justify-center">
-                  <MessageCircle size={20} />
-                </div>
-              </div>
+
             </div>
             
-            <div>
-              <h4 className="text-lg font-semibold mb-4">Serviços</h4>
-              <ul className="space-y-2 text-climax-gray-400">
-                <li>Instalação de Ar Condicionado</li>
-                <li>Manutenção Preventiva</li>
-                <li>Reparo de Ar Condicionado</li>
-                <li>Limpeza de Ar Condicionado</li>
-                <li>Venda de Equipamentos</li>
-              </ul>
-            </div>
+
             
             <div>
               <h4 className="text-lg font-semibold mb-4">Contato</h4>
               <div className="space-y-2 text-climax-gray-400">
                 <p>(43) 99831-2268</p>
-                <p>contato@climax.com.br</p>
+                <p>andre.climax@gmail.com</p>
                 <p>Atendimento 24h</p>
                 <p>Orçamento gratuito</p>
               </div>
