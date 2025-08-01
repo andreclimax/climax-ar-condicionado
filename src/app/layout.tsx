@@ -20,14 +20,14 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
-  metadataBase: new URL('https://climaxarcondicionado.com.br'),
+  metadataBase: new URL('https://climaxarcondicionado.com'),
   alternates: {
     canonical: '/',
   },
   openGraph: {
     title: 'Climax Ar Condicionado - Especialistas em Londrina',
     description: 'Venda, instalação e manutenção de ar condicionado em Londrina. Atendimento 24h. Mais de 10 anos de experiência.',
-    url: 'https://climaxarcondicionado.com.br',
+    url: 'https://climaxarcondicionado.com',
     siteName: 'Climax Ar Condicionado',
     locale: 'pt_BR',
     type: 'website',
@@ -85,7 +85,7 @@ export default function RootLayout({
               "@type": "LocalBusiness",
               "name": "Climax Ar Condicionado",
               "description": "Especialistas em ar condicionado em Londrina há mais de 22 anos",
-              "url": "https://climaxarcondicionado.com.br",
+              "url": "https://climaxarcondicionado.com",
               "telephone": "+5543998312268",
               "email": "andre.climax@gmail.com",
               "address": {
@@ -101,8 +101,8 @@ export default function RootLayout({
               },
               "openingHours": "Mo-Su 00:00-23:59",
               "priceRange": "$$",
-              "image": "https://climaxarcondicionado.com.br/logo.jpg",
-              "logo": "https://climaxarcondicionado.com.br/logo.jpg",
+              "image": "https://climaxarcondicionado.com/logo.jpg",
+              "logo": "https://climaxarcondicionado.com/logo.jpg",
               "sameAs": [
                 "https://www.facebook.com/climaxarcondicionado",
                 "https://www.instagram.com/climaxarcondicionado"

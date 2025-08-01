@@ -1,20 +1,19 @@
+# Aplicar a todos os robôs
 User-agent: *
-Allow: /
 
-# Sitemap
-Sitemap: https://climaxarcondicionado.com.br/sitemap.xml
-
-# Crawl-delay
-Crawl-delay: 1
-
-# Disallow admin areas (if any)
+# Impedir o rastreamento de áreas administrativas e arquivos de sistema
 Disallow: /admin/
 Disallow: /api/
 Disallow: /_next/
-Disallow: /static/
 
-# Allow important pages
+# Permitir acesso a todas as páginas importantes
 Allow: /
 Allow: /servicos
 Allow: /sobre
-Allow: /contato 
+Allow: /contato
+
+# Localização do Sitemap
+Sitemap: https://climaxarcondicionado.com/sitemap.xml
+
+# Crawl-delay para respeitar o servidor
+Crawl-delay: 1 

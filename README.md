@@ -81,9 +81,9 @@ npm start
 Crie um arquivo `.env.local`:
 
 ```env
-NEXT_PUBLIC_SITE_URL=https://climaxarcondicionado.com.br
+NEXT_PUBLIC_SITE_URL=https://climaxarcondicionado.com
 NEXT_PUBLIC_PHONE=+5543999999999
-NEXT_PUBLIC_EMAIL=contato@climaxarcondicionado.com.br
+NEXT_PUBLIC_EMAIL=contato@climaxarcondicionado.com
 ```
 
 ### Personalização
@@ -154,7 +154,7 @@ Para adicionar analytics:
 ## 📞 Suporte
 
 Para dúvidas ou suporte técnico:
-- **Email:** contato@climaxarcondicionado.com.br
+- **Email:** contato@climaxarcondicionado.com
 - **Telefone:** (43) 99999-9999
 
 ## 📄 Licença
