@@ -1,21 +1,21 @@
 {
   "name": "Climax Ar Condicionado",
   "short_name": "Climax",
-  "description": "Especialistas em ar condicionado em Londrina há mais de 10 anos. Venda, instalação e manutenção profissional.",
+  "description": "Especialistas em ar condicionado em Londrina há mais de 22 anos. Venda, instalação e manutenção profissional.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#ffffff",
-  "theme_color": "#1e3a8a",
+  "theme_color": "#FF6B35",
   "orientation": "portrait-primary",
   "icons": [
     {
-      "src": "/icon-192x192.png",
+      "src": "/climax-logo.png",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "maskable any"
     },
     {
-      "src": "/icon-512x512.png",
+      "src": "/climax-logo.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "maskable any"

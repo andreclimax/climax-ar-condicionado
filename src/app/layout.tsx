@@ -70,11 +70,30 @@ export default function RootLayout({
   return (
     <html lang="pt-BR" className={inter.variable}>
       <head>
-        <link rel="icon" href="/favicon.ico" />
+        {/* Favicon e ícones otimizados para Google */}
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="icon" href="/favicon.png" type="image/png" sizes="32x32" />
+        <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+        <link rel="apple-touch-icon" href="/climax-logo.png" />
         <link rel="manifest" href="/manifest.json" />
+        
+        {/* Meta tags para logo no Google */}
+        <meta name="msapplication-TileColor" content="#FF6B35" />
+        <meta name="msapplication-TileImage" content="/climax-logo.png" />
         <meta name="theme-color" content="#FF6B35" />
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
         <meta name="format-detection" content="telephone=no" />
+        
+        {/* Open Graph com logo */}
+        <meta property="og:image" content="https://climaxarcondicionado.com/climax-logo.png" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:image:alt" content="Climax Ar Condicionado - Logo" />
+        
+        {/* Twitter Card com logo */}
+        <meta name="twitter:image" content="https://climaxarcondicionado.com/climax-logo.png" />
+        <meta name="twitter:image:alt" content="Climax Ar Condicionado - Logo" />
         
         {/* Structured Data */}
         <script
@@ -101,8 +120,8 @@ export default function RootLayout({
               },
               "openingHours": "Mo-Su 00:00-23:59",
               "priceRange": "$$",
-              "image": "https://climaxarcondicionado.com/logo.jpg",
-              "logo": "https://climaxarcondicionado.com/logo.jpg",
+              "image": "https://climaxarcondicionado.com/climax-logo.png",
+              "logo": "https://climaxarcondicionado.com/climax-logo.png",
               "sameAs": [
                 "https://www.facebook.com/climaxarcondicionado",
                 "https://www.instagram.com/climaxarcondicionado"
