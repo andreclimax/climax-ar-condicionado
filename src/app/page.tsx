@@ -981,54 +981,58 @@ export default function Home() {
                              <form className="space-y-6" id="contactForm">
                  <div className="grid md:grid-cols-2 gap-6">
                    <div>
-                     <label className="block text-white font-medium mb-2">Nome</label>
+                     <label htmlFor="nome" className="block text-white font-medium mb-2">Nome</label>
                      <input
                        type="text"
                        id="nome"
                        className="form-input bg-white/90 border-white/20 text-climax-gray-900 placeholder-climax-gray-500"
                        placeholder="Seu nome completo"
+                       aria-label="Digite seu nome completo"
                      />
                    </div>
                    <div>
-                     <label className="block text-white font-medium mb-2">Telefone</label>
+                     <label htmlFor="telefone" className="block text-white font-medium mb-2">Telefone</label>
                      <input
                        type="tel"
                        id="telefone"
                        className="form-input bg-white/90 border-white/20 text-climax-gray-900 placeholder-climax-gray-500"
                        placeholder="(11) 99999-9999"
+                       aria-label="Digite seu número de telefone"
                      />
                    </div>
                  </div>
                  
                  <div>
-                   <label className="block text-white font-medium mb-2">E-mail</label>
+                   <label htmlFor="email" className="block text-white font-medium mb-2">E-mail</label>
                    <input
                      type="email"
                      id="email"
                      className="form-input bg-white/90 border-white/20 text-climax-gray-900 placeholder-climax-gray-500"
                      placeholder="seu@email.com"
+                     aria-label="Digite seu endereço de e-mail"
                    />
                  </div>
                  
                  <div>
-                   <label className="block text-white font-medium mb-2">Serviço Desejado</label>
-                   <select id="servico" className="form-input bg-white/90 border-white/20 text-climax-gray-900">
-                     <option>Selecione um serviço</option>
-                     <option>Instalação de Ar Condicionado</option>
-                     <option>Manutenção Preventiva</option>
-                     <option>Reparo de Ar Condicionado</option>
-                     <option>Limpeza de Ar Condicionado</option>
-                     <option>Outro</option>
+                   <label htmlFor="servico" className="block text-white font-medium mb-2">Serviço Desejado</label>
+                   <select id="servico" className="form-input bg-white/90 border-white/20 text-climax-gray-900" aria-label="Selecione o serviço desejado">
+                     <option value="">Selecione um serviço</option>
+                     <option value="instalacao">Instalação de Ar Condicionado</option>
+                     <option value="manutencao">Manutenção Preventiva</option>
+                     <option value="reparo">Reparo de Ar Condicionado</option>
+                     <option value="limpeza">Limpeza de Ar Condicionado</option>
+                     <option value="outro">Outro</option>
                    </select>
                  </div>
                  
                  <div>
-                   <label className="block text-white font-medium mb-2">Mensagem</label>
+                   <label htmlFor="mensagem" className="block text-white font-medium mb-2">Mensagem</label>
                    <textarea
                      id="mensagem"
                      className="form-input bg-white/90 border-white/20 text-climax-gray-900 placeholder-climax-gray-500"
                      rows={4}
                      placeholder="Descreva sua necessidade..."
+                     aria-label="Digite sua mensagem ou descrição da necessidade"
                    ></textarea>
                  </div>
                  
