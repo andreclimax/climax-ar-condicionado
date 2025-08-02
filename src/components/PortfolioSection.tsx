@@ -112,7 +112,7 @@ export default function PortfolioSection() {
                   </div>
                 </div>
                 <div className="absolute top-2 left-2 z-10">
-                  <span className="bg-orange-500 text-white px-3 py-1 rounded-full text-sm font-medium shadow-lg">
+                  <span className="bg-climax-primary text-white px-3 py-1 rounded-full text-sm font-medium shadow-lg">
                     {item.category}
                   </span>
                 </div>
@@ -149,7 +149,7 @@ export default function PortfolioSection() {
             </p>
             <a
               href="#contact"
-              className="bg-orange-500 hover:bg-orange-600 text-white font-semibold py-3 px-8 rounded-lg transition-colors duration-300 inline-block"
+              className="bg-climax-primary hover:bg-climax-primary-dark text-white font-semibold py-3 px-8 rounded-lg transition-colors duration-300 inline-block"
             >
               Solicitar Orçamento
             </a>

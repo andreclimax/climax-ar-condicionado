@@ -1075,7 +1075,7 @@ Mensagem: ${mensagem}`;
               <div className="mb-4">
                 <ClimaxLogo size="md" />
               </div>
-              <p className="text-climax-gray-400 mb-4">
+              <p className="text-climax-gray-300 mb-4">
                 Especialistas em ar condicionado com qualidade e garantia de satisfação.
               </p>
 
@@ -1085,7 +1085,7 @@ Mensagem: ${mensagem}`;
             
             <div>
               <h4 className="text-lg font-semibold mb-4">Contato</h4>
-              <div className="space-y-2 text-climax-gray-400">
+              <div className="space-y-2 text-climax-gray-300">
                 <p>(43) 99831-2268</p>
                 <p>andre.climax@gmail.com</p>
                 <p>Atendimento 24h</p>
@@ -1094,7 +1094,7 @@ Mensagem: ${mensagem}`;
             </div>
           </div>
           
-          <div className="border-t border-climax-gray-800 mt-8 pt-8 text-center text-climax-gray-400">
+          <div className="border-t border-climax-gray-800 mt-8 pt-8 text-center text-climax-gray-300">
             <p>&copy; 2024 Climax Ar Condicionado. Todos os direitos reservados.</p>
           </div>
         </div>
