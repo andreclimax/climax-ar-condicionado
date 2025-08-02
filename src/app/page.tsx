@@ -211,9 +211,9 @@ export default function Home() {
                         className="object-contain"
                       />
                     </div>
-                    <h3 className="text-lg sm:text-xl font-semibold text-climax-gray-900 mb-1 sm:mb-2">
+                    <h2 className="text-lg sm:text-xl font-semibold text-climax-gray-900 mb-1 sm:mb-2">
                       Ar Condicionado
-                    </h3>
+                    </h2>
                     <p className="text-sm sm:text-base text-climax-gray-600">
                       Qualidade e conforto garantidos
                     </p>
@@ -555,7 +555,7 @@ export default function Home() {
                     className="rounded-lg object-contain"
                   />
                 </div>
-                <h4 className="font-semibold text-climax-gray-900">Walter Carreri</h4>
+                <h3 className="font-semibold text-climax-gray-900">Walter Carreri</h3>
                 <p className="text-climax-gray-500 text-sm">DWLfoods</p>
               </div>
             </motion.div>
@@ -588,7 +588,7 @@ export default function Home() {
                     className="rounded-lg object-contain"
                   />
                 </div>
-                <h4 className="font-semibold text-climax-gray-900">Robson Andrade</h4>
+                <h3 className="font-semibold text-climax-gray-900">Robson Andrade</h3>
                 <p className="text-climax-gray-500 text-sm">Planejamento e Gestão de Obras</p>
               </div>
             </motion.div>
@@ -621,7 +621,7 @@ export default function Home() {
                     className="rounded-lg object-contain"
                   />
                 </div>
-                <h4 className="font-semibold text-climax-gray-900">Gabriel Zequini</h4>
+                <h3 className="font-semibold text-climax-gray-900">Gabriel Zequini</h3>
                 <p className="text-climax-gray-500 text-sm">Legacy Barbershop</p>
               </div>
             </motion.div>
@@ -654,7 +654,7 @@ export default function Home() {
                     className="rounded-lg object-contain"
                   />
                 </div>
-                <h4 className="font-semibold text-climax-gray-900">Rodrigo Leandro</h4>
+                <h3 className="font-semibold text-climax-gray-900">Rodrigo Leandro</h3>
                 <p className="text-climax-gray-500 text-sm">Colégio Marista</p>
               </div>
             </motion.div>
@@ -687,7 +687,7 @@ export default function Home() {
                       className="rounded-lg object-contain"
                     />
                   </div>
-                <h4 className="font-semibold text-climax-gray-900">Pablo Pereyra</h4>
+                <h3 className="font-semibold text-climax-gray-900">Pablo Pereyra</h3>
                 <p className="text-climax-gray-500 text-sm">Vulpeinc</p>
               </div>
             </motion.div>
@@ -760,7 +760,7 @@ export default function Home() {
                       <Clock size={24} />
                     </div>
                     <div>
-                      <h4 className="font-semibold text-climax-gray-900 mb-2">Atendimento 24h</h4>
+                      <h3 className="font-semibold text-climax-gray-900 mb-2">Atendimento 24h</h3>
                       <p className="text-climax-gray-600">Disponível 24 horas por dia, incluindo fins de semana</p>
                     </div>
                   </div>
@@ -770,7 +770,7 @@ export default function Home() {
                       <Shield size={24} />
                     </div>
                     <div>
-                      <h4 className="font-semibold text-climax-gray-900 mb-2">Documentação Completa</h4>
+                      <h3 className="font-semibold text-climax-gray-900 mb-2">Documentação Completa</h3>
                       <p className="text-climax-gray-600">Emissão de PMOC, ART e todos os documentos necessários</p>
                     </div>
                   </div>
@@ -780,7 +780,7 @@ export default function Home() {
                       <Wrench size={24} />
                     </div>
                     <div>
-                      <h4 className="font-semibold text-climax-gray-900 mb-2">Engenheiro Capacitado</h4>
+                      <h3 className="font-semibold text-climax-gray-900 mb-2">Engenheiro Capacitado</h3>
                       <p className="text-climax-gray-600">Profissional qualificado para todas as manutenções necessárias</p>
                     </div>
                   </div>
@@ -790,7 +790,7 @@ export default function Home() {
                       <Settings size={24} />
                     </div>
                     <div>
-                      <h4 className="font-semibold text-climax-gray-900 mb-2">Projetos de Climatização</h4>
+                      <h3 className="font-semibold text-climax-gray-900 mb-2">Projetos de Climatização</h3>
                       <p className="text-climax-gray-600">Instalação profissional com projetos técnicos completos</p>
                     </div>
                   </div>
@@ -1084,7 +1084,7 @@ Mensagem: ${mensagem}`;
 
             
             <div>
-              <h4 className="text-lg font-semibold mb-4">Contato</h4>
+              <h3 className="text-lg font-semibold mb-4">Contato</h3>
               <div className="space-y-2 text-climax-gray-300">
                 <p>(43) 99831-2268</p>
                 <p>andre.climax@gmail.com</p>
