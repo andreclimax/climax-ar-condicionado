@@ -36,6 +36,8 @@ export default function ImageModal({ isOpen, onClose, imageSrc, imageAlt, title,
           <button
             onClick={onClose}
             className="absolute top-4 right-4 z-10 bg-white/90 hover:bg-white text-gray-800 rounded-full p-2 shadow-lg transition-colors"
+            aria-label="Fechar modal"
+            type="button"
           >
             <X size={24} />
           </button>

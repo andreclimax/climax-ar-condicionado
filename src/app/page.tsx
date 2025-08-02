@@ -60,6 +60,10 @@ export default function Home() {
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className="lg:hidden p-2 text-climax-gray-700 hover:text-climax-primary transition-colors"
+              aria-label={isMenuOpen ? "Fechar menu de navegação" : "Abrir menu de navegação"}
+              aria-expanded={isMenuOpen}
+              aria-controls="mobile-navigation"
+              type="button"
             >
               {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
@@ -67,7 +71,7 @@ export default function Home() {
 
           {/* Mobile Navigation */}
           {isMenuOpen && (
-            <div className="lg:hidden py-4 border-t border-gray-100">
+            <div id="mobile-navigation" className="lg:hidden py-4 border-t border-gray-100">
               <nav className="flex flex-col space-y-4">
                 <a
                   href="#home"
