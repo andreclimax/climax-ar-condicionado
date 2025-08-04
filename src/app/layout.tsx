@@ -58,7 +58,7 @@ export const metadata: Metadata = {
     },
   },
   verification: {
-    google: 'your-google-verification-code',
+    google: process.env.GOOGLE_VERIFICATION_CODE || 'your-google-verification-code',
   },
 }
 
@@ -98,97 +98,102 @@ export default function RootLayout({
         {/* Structured Data */}
         <script
           type="application/ld+json"
+          id="structured-data"
+        />
+        <script
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "LocalBusiness",
-              "name": "Climax Ar Condicionado",
-              "description": "Especialistas em ar condicionado em Londrina há mais de 22 anos. Venda, instalação e manutenção profissional com PMOC, ART e engenheiro capacitado. Atendimento 24h.",
-              "url": "https://climaxarcondicionado.com",
-              "telephone": "+5543998312268",
-              "email": "andre.climax@gmail.com",
-              "address": {
-                "@type": "PostalAddress",
-                "addressLocality": "Londrina",
-                "addressRegion": "PR",
-                "addressCountry": "BR"
-              },
-              "geo": {
-                "@type": "GeoCoordinates",
-                "latitude": "-23.3105",
-                "longitude": "-51.1593"
-              },
-              "openingHours": "Mo-Su 00:00-23:59",
-              "priceRange": "$$",
-              "image": "https://climaxarcondicionado.com/climax-logo.png",
-              "logo": "https://climaxarcondicionado.com/climax-logo.png",
-              "sameAs": [
-                "https://www.facebook.com/climaxarcondicionado",
-                "https://www.instagram.com/climaxarcondicionado"
-              ],
-              "serviceArea": {
-                "@type": "GeoCircle",
-                "geoMidpoint": {
+            __html: `
+              document.getElementById('structured-data').textContent = JSON.stringify({
+                "@context": "https://schema.org",
+                "@type": "LocalBusiness",
+                "name": "Climax Ar Condicionado",
+                "description": "Especialistas em ar condicionado em Londrina há mais de 22 anos. Venda, instalação e manutenção profissional com PMOC, ART e engenheiro capacitado. Atendimento 24h.",
+                "url": "https://climaxarcondicionado.com",
+                "telephone": "+5543998312268",
+                "email": "andre.climax@gmail.com",
+                "address": {
+                  "@type": "PostalAddress",
+                  "addressLocality": "Londrina",
+                  "addressRegion": "PR",
+                  "addressCountry": "BR"
+                },
+                "geo": {
                   "@type": "GeoCoordinates",
                   "latitude": "-23.3105",
                   "longitude": "-51.1593"
                 },
-                "geoRadius": "50000"
-              },
-              "hasOfferCatalog": {
-                "@type": "OfferCatalog",
-                "name": "Serviços de Ar Condicionado",
-                "itemListElement": [
-                  {
-                    "@type": "Offer",
-                    "itemOffered": {
-                      "@type": "Service",
-                      "name": "Venda de Ar Condicionado",
-                      "description": "Venda de equipamentos de ar condicionado com garantia e instalação"
-                    }
+                "openingHours": "Mo-Su 00:00-23:59",
+                "priceRange": "$$",
+                "image": "https://climaxarcondicionado.com/climax-logo.png",
+                "logo": "https://climaxarcondicionado.com/climax-logo.png",
+                "sameAs": [
+                  "https://www.facebook.com/climaxarcondicionado",
+                  "https://www.instagram.com/climaxarcondicionado"
+                ],
+                "serviceArea": {
+                  "@type": "GeoCircle",
+                  "geoMidpoint": {
+                    "@type": "GeoCoordinates",
+                    "latitude": "-23.3105",
+                    "longitude": "-51.1593"
                   },
-                  {
-                    "@type": "Offer",
-                    "itemOffered": {
-                      "@type": "Service",
-                      "name": "Instalação de Ar Condicionado",
-                      "description": "Instalação profissional com projetos de climatização e ART"
+                  "geoRadius": "50000"
+                },
+                "hasOfferCatalog": {
+                  "@type": "OfferCatalog",
+                  "name": "Serviços de Ar Condicionado",
+                  "itemListElement": [
+                    {
+                      "@type": "Offer",
+                      "itemOffered": {
+                        "@type": "Service",
+                        "name": "Venda de Ar Condicionado",
+                        "description": "Venda de equipamentos de ar condicionado com garantia e instalação"
+                      }
+                    },
+                    {
+                      "@type": "Offer",
+                      "itemOffered": {
+                        "@type": "Service",
+                        "name": "Instalação de Ar Condicionado",
+                        "description": "Instalação profissional com projetos de climatização e ART"
+                      }
+                    },
+                    {
+                      "@type": "Offer",
+                      "itemOffered": {
+                        "@type": "Service",
+                        "name": "Manutenção de Ar Condicionado",
+                        "description": "Manutenção preventiva e corretiva com PMOC e engenheiro capacitado"
+                      }
+                    },
+                    {
+                      "@type": "Offer",
+                      "itemOffered": {
+                        "@type": "Service",
+                        "name": "Projetos de Climatização",
+                        "description": "Projetos técnicos completos com documentação PMOC"
+                      }
                     }
-                  },
-                  {
-                    "@type": "Offer",
-                    "itemOffered": {
-                      "@type": "Service",
-                      "name": "Manutenção de Ar Condicionado",
-                      "description": "Manutenção preventiva e corretiva com PMOC e engenheiro capacitado"
-                    }
-                  },
-                  {
-                    "@type": "Offer",
-                    "itemOffered": {
-                      "@type": "Service",
-                      "name": "Projetos de Climatização",
-                      "description": "Projetos técnicos completos com documentação PMOC"
-                    }
-                  }
+                  ]
+                },
+                "aggregateRating": {
+                  "@type": "AggregateRating",
+                  "ratingValue": "4.9",
+                  "reviewCount": "150",
+                  "bestRating": "5",
+                  "worstRating": "1"
+                },
+                "foundingDate": "2002",
+                "numberOfEmployees": "10",
+                "award": [
+                  "22 anos de experiência",
+                  "Engenheiro capacitado",
+                  "PMOC e ART",
+                  "Atendimento 24h"
                 ]
-              },
-              "aggregateRating": {
-                "@type": "AggregateRating",
-                "ratingValue": "4.9",
-                "reviewCount": "150",
-                "bestRating": "5",
-                "worstRating": "1"
-              },
-              "foundingDate": "2002",
-              "numberOfEmployees": "10",
-              "award": [
-                "22 anos de experiência",
-                "Engenheiro capacitado",
-                "PMOC e ART",
-                "Atendimento 24h"
-              ]
-            })
+              });
+            `
           }}
         />
       </head>

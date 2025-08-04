@@ -12,11 +12,29 @@ export function middleware(request: NextRequest) {
   // Headers de segurança
   const response = NextResponse.next();
   
-  // Headers de segurança adicionais
+  // Headers de segurança básicos
   response.headers.set('X-Content-Type-Options', 'nosniff');
   response.headers.set('X-Frame-Options', 'DENY');
   response.headers.set('X-XSS-Protection', '1; mode=block');
   response.headers.set('Referrer-Policy', 'strict-origin-when-cross-origin');
+  
+  // HSTS - Força HTTPS por 1 ano
+  response.headers.set('Strict-Transport-Security', 'max-age=31536000; includeSubDomains; preload');
+  
+  // Content Security Policy
+  response.headers.set('Content-Security-Policy', "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https: blob:; connect-src 'self' https://www.google-analytics.com; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self';");
+  
+  // Permissions Policy
+  response.headers.set('Permissions-Policy', 'camera=(), microphone=(), geolocation=(), payment=(), usb=(), magnetometer=(), gyroscope=(), accelerometer=()');
+  
+  // Cross-Origin Policies
+  response.headers.set('Cross-Origin-Embedder-Policy', 'require-corp');
+  response.headers.set('Cross-Origin-Opener-Policy', 'same-origin');
+  response.headers.set('Cross-Origin-Resource-Policy', 'same-origin');
+  
+  // Rate limiting básico (implementação simples)
+  // const ip = request.headers.get('x-forwarded-for') || request.headers.get('x-real-ip') || 'unknown';
+  // const rateLimitKey = `rate_limit_${ip}`; // Para implementação futura de rate limiting
   
   // Cache headers para assets estáticos
   if (request.nextUrl.pathname.startsWith('/images/') || 
@@ -26,8 +44,16 @@ export function middleware(request: NextRequest) {
       request.nextUrl.pathname.endsWith('.jpeg') ||
       request.nextUrl.pathname.endsWith('.gif') ||
       request.nextUrl.pathname.endsWith('.svg') ||
-      request.nextUrl.pathname.endsWith('.ico')) {
+      request.nextUrl.pathname.endsWith('.ico') ||
+      request.nextUrl.pathname.endsWith('.webp')) {
     response.headers.set('Cache-Control', 'public, max-age=31536000, immutable');
+  }
+  
+  // Headers específicos para APIs
+  if (request.nextUrl.pathname.startsWith('/api/')) {
+    response.headers.set('Cache-Control', 'no-store, no-cache, must-revalidate, proxy-revalidate');
+    response.headers.set('Pragma', 'no-cache');
+    response.headers.set('Expires', '0');
   }
 
   return response;
