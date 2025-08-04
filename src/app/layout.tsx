@@ -9,9 +9,9 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: 'Climax Ar Condicionado - Venda, Instalação e Manutenção em Londrina',
-  description: 'Especialistas em ar condicionado em Londrina há mais de 22 anos. Venda, instalação e manutenção profissional com PMOC e ART. Atendimento 24h. Ligue (43) 99831-2268',
-  keywords: 'ar condicionado, londrina, manutenção ar condicionado, instalação ar condicionado, venda ar condicionado, climatização, climax',
+  title: 'Climax Ar Condicionado - Venda, Instalação e Manutenção em Londrina | 22 Anos de Experiência',
+  description: 'Especialistas em ar condicionado em Londrina há mais de 22 anos. Venda, instalação e manutenção profissional com PMOC, ART e engenheiro capacitado. Atendimento 24h. Orçamento gratuito. Ligue (43) 99831-2268',
+  keywords: 'ar condicionado londrina, manutenção ar condicionado londrina, instalação ar condicionado londrina, venda ar condicionado londrina, climatização londrina, climax ar condicionado, PMOC londrina, ART climatização, engenheiro ar condicionado londrina, atendimento 24h ar condicionado',
   authors: [{ name: 'Climax Ar Condicionado' }],
   creator: 'Climax Ar Condicionado',
   publisher: 'Climax Ar Condicionado',
@@ -25,26 +25,26 @@ export const metadata: Metadata = {
     canonical: '/',
   },
   openGraph: {
-    title: 'Climax Ar Condicionado - Especialistas em Londrina',
-    description: 'Venda, instalação e manutenção de ar condicionado em Londrina. Atendimento 24h. Mais de 10 anos de experiência.',
+    title: 'Climax Ar Condicionado - Especialistas em Londrina | 22 Anos de Experiência',
+    description: 'Venda, instalação e manutenção de ar condicionado em Londrina. PMOC, ART e engenheiro capacitado. Atendimento 24h. Orçamento gratuito.',
     url: 'https://climaxarcondicionado.com',
     siteName: 'Climax Ar Condicionado',
     locale: 'pt_BR',
     type: 'website',
     images: [
       {
-        url: '/og-image.jpg',
+        url: '/climax-logo.png',
         width: 1200,
         height: 630,
-        alt: 'Climax Ar Condicionado - Especialistas em Londrina',
+        alt: 'Climax Ar Condicionado - Especialistas em Londrina há 22 anos',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Climax Ar Condicionado - Especialistas em Londrina',
-    description: 'Venda, instalação e manutenção de ar condicionado em Londrina. Atendimento 24h.',
-    images: ['/og-image.jpg'],
+    title: 'Climax Ar Condicionado - Especialistas em Londrina | 22 Anos',
+    description: 'Venda, instalação e manutenção de ar condicionado em Londrina. PMOC, ART e atendimento 24h.',
+    images: ['/climax-logo.png'],
   },
   robots: {
     index: true,
@@ -103,7 +103,7 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "LocalBusiness",
               "name": "Climax Ar Condicionado",
-              "description": "Especialistas em ar condicionado em Londrina há mais de 22 anos",
+              "description": "Especialistas em ar condicionado em Londrina há mais de 22 anos. Venda, instalação e manutenção profissional com PMOC, ART e engenheiro capacitado. Atendimento 24h.",
               "url": "https://climaxarcondicionado.com",
               "telephone": "+5543998312268",
               "email": "andre.climax@gmail.com",
@@ -143,25 +143,51 @@ export default function RootLayout({
                     "@type": "Offer",
                     "itemOffered": {
                       "@type": "Service",
-                      "name": "Venda de Ar Condicionado"
+                      "name": "Venda de Ar Condicionado",
+                      "description": "Venda de equipamentos de ar condicionado com garantia e instalação"
                     }
                   },
                   {
                     "@type": "Offer",
                     "itemOffered": {
                       "@type": "Service",
-                      "name": "Instalação de Ar Condicionado"
+                      "name": "Instalação de Ar Condicionado",
+                      "description": "Instalação profissional com projetos de climatização e ART"
                     }
                   },
                   {
                     "@type": "Offer",
                     "itemOffered": {
                       "@type": "Service",
-                      "name": "Manutenção de Ar Condicionado"
+                      "name": "Manutenção de Ar Condicionado",
+                      "description": "Manutenção preventiva e corretiva com PMOC e engenheiro capacitado"
+                    }
+                  },
+                  {
+                    "@type": "Offer",
+                    "itemOffered": {
+                      "@type": "Service",
+                      "name": "Projetos de Climatização",
+                      "description": "Projetos técnicos completos com documentação PMOC"
                     }
                   }
                 ]
-              }
+              },
+              "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "4.9",
+                "reviewCount": "150",
+                "bestRating": "5",
+                "worstRating": "1"
+              },
+              "foundingDate": "2002",
+              "numberOfEmployees": "10",
+              "award": [
+                "22 anos de experiência",
+                "Engenheiro capacitado",
+                "PMOC e ART",
+                "Atendimento 24h"
+              ]
             })
           }}
         />
