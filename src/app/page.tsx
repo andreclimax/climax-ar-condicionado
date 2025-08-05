@@ -576,7 +576,7 @@ export default function Home() {
                 </div>
               </div>
               <p className="text-climax-gray-600 mb-6 italic">
-                &ldquo;Contratei o André da clímax ar condicionado para cuidar do projeto e da infraestrutura do meu ar condicionado, e só tenho elogios! Ele trabalha super bem, é rápido, muito profissional e realmente entende do que faz. Tudo foi entregue no prazo, com acabamento impecável e com toda a qualidade que eu esperava. Recomendo de olhos fechados para quem quer um serviço de confiança e sem dor de cabeça!&rdquo;
+                &ldquo;A Climax cuida de toda infra estrutura de ar condicionado de todas as nossas obras. Como se tratam de obras de alto padrão, prezamos muito em ter parceiros com excelência no serviço e alta qualidade dos materiais. Possuem um ótimo atendimento, qualidade e assistência técnica, com um excelente pós-venda. Parabéns ao André ao Gomes e a toda equipe da Climax.&rdquo;
               </p>
               <div className="text-center">
                 <div className="mb-4 flex justify-center">
@@ -589,7 +589,7 @@ export default function Home() {
                   />
                 </div>
                 <h3 className="font-semibold text-climax-gray-900">Robson Andrade</h3>
-                <p className="text-climax-gray-500 text-sm">Planejamento e Gestão de Obras</p>
+                <p className="text-climax-gray-500 text-sm">RA Planejamento e Gestão de Obras</p>
               </div>
             </motion.div>
 
